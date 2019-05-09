@@ -13,7 +13,7 @@
   await mongoose.connect();
   const executeModel = require('./models/AgencyGroupCandidateStatusHistory');
 
-  console.time("JD");
+  console.time("StartTime");
 
   let uniqueStatus = await executeModel.find().distinct('status').exec();
   let uniqueCandidateType = await executeModel.find().distinct('candidate_type').exec();
@@ -76,7 +76,7 @@
     fs.writeFile('candidateStatus.csv', csv, function(err) {
       if (err) throw err;
 
-      console.timeEnd("JD");
+      console.timeEnd("StartTime");
       console.log('CSV created successfully...!!!');
     });
 
