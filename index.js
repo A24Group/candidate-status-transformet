@@ -16,6 +16,7 @@
 
   let agency_group_id = "";
   let query = {};
+  //changed_at: {"$gte": new Date("2010-01-02T00:00:00.000Z"), "$lt": new Date("2010-01-02T23:59:50.000Z")}
   if (agency_group_id) {
     query.agency_group_id = agency_group_id;
   }
@@ -44,11 +45,11 @@
   try {
     // get documents from collection via query filter if needed else get all records
     // TODO we can also add filter of data between date range
-
-    let data = await executeModel.find(query, {status: 1, candidate_type: 1, changed_at: 1}).exec();
+    let data = await executeModel.find(query, {status: 1, candidate_type: 1, changed_at: 1, candidate_id: 1}).sort({changed_at: -1}).exec();
     console.log("Total Record need to process : ", data.length);
     let index = -1;
     _.forEach(data, entry => {
+      entry.candidate_id = entry.candidate_id ? entry.candidate_id.toString() : ''
       // find index using document data from destination array of object
       index = _.findIndex(destination, {
         status: entry.status,
@@ -62,6 +63,26 @@
       ) {
         destination[index].candidate_id.push(entry.candidate_id);
         destination[index].count++;
+
+        // find element for decrease the counter
+        let indexDecrease = _.findIndex(destination, (desti) => {
+          if (desti.date === moment(entry.changed_at).format("YYYY-MM-DD")
+          && desti.candidate_type === entry.candidate_type
+          && desti.status !== entry.status
+          && desti.candidate_id
+          && desti.candidate_id.length && desti.candidate_id.indexOf(entry.candidate_id) >= 0) {
+            return true;
+          }
+          return false
+        });
+
+        // candidate already updated status on same date, need to decrease counter
+        if (indexDecrease !== -1 && destination[indexDecrease]) {
+          destination[indexDecrease].count--;
+          if (destination[indexDecrease].candidate_id && destination[indexDecrease].candidate_id.length) {
+            destination[indexDecrease].candidate_id.pop(entry.candidate_id);
+          }
+        }
       }
     });
 
