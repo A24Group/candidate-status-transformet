@@ -13,7 +13,10 @@ const groupModelSchema = new mongoose.Schema({
   status: String,
   comment: String,
   status_id: String,
-  changed_at: Date,
+  changed_at: {
+    type: Date,
+    index: true
+  },
   changed_by: {
     system: Boolean,
     id: String,
