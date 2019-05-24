@@ -1,0 +1,92 @@
+[
+  {
+    "updated_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "created_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "agency_group_id" : "57adbd97d5d82adbaf297dbf",
+    "candidate_id" : "5bd153544a79a11a8f6d9e69",
+    "historical_status" : true,
+    "status" : "Not Interviewed",
+    "comment" : "xxx",
+    "changed_at" : ISODate("2010-01-01T00:00:00Z"),
+    "changed_by" : {
+      "system" : false,
+      "id" : "5a6ac1064a79a12eb0733d14",
+      "name" : "xxx"
+    },
+    "__v" : 0,
+    "status_id" : "5b8916f1f4ca49fe9cf3c7ac",
+    "candidate_type" : "nurse"
+  },
+  {
+    "updated_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "created_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "agency_group_id" : "57adbd97d5d82adbaf297dbf",
+    "candidate_id" : "5b4722764a79a13a274d612b",
+    "historical_status" : true,
+    "status" : "Not Interviewed",
+    "comment" : "xxx",
+    "changed_at" : ISODate("2010-01-01T00:00:00Z"),
+    "changed_by" : {
+      "system" : false,
+      "id" : "5a6ac1064a79a12eb0733d14",
+      "name" : "xxx"
+    },
+    "__v" : 0,
+    "status_id" : "5b8916f1f4ca49fe9cf3c7ac",
+    "candidate_type" : "nurse"
+  },
+  {
+    "updated_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "created_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "agency_group_id" : "57adbd97d5d82adbaf297dbf",
+    "candidate_id" : "5b4722764a79a13a274d612b",
+    "historical_status" : true,
+    "status" : "Final Sign",
+    "comment" : "xxx",
+    "changed_at" : ISODate("2010-01-10T00:00:00Z"),
+    "changed_by" : {
+      "system" : false,
+      "id" : "5a6ac1064a79a12eb0733d14",
+      "name" : "xxx"
+    },
+    "__v" : 0,
+    "status_id" : "5b890f29f4ca4942e5f3c7a4",
+    "candidate_type" : "nurse"
+  },
+  {
+    "updated_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "created_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "agency_group_id" : "57adbd97d5d82adbaf297dbf",
+    "candidate_id" : "52e64365cfbdc3036d000ee8",
+    "historical_status" : true,
+    "status" : "Not Interviewed",
+    "comment" : "xxx",
+    "changed_at" : ISODate("2010-01-15T00:00:00Z"),
+    "changed_by" : {
+      "system" : false,
+      "id" : "5a6ac1064a79a12eb0733d14",
+      "name" : "xxx"
+    },
+    "__v" : 0,
+    "status_id" : "5b8916f1f4ca49fe9cf3c7ac",
+    "candidate_type" : "nurse"
+  },
+  {
+    "updated_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "created_at" : ISODate("2018-10-25T10:18:22.955Z"),
+    "agency_group_id" : "57adbd97d5d82adbaf297dbf",
+    "candidate_id" : "52e64365cfbdc3036d000ee8",
+    "historical_status" : true,
+    "status" : "Final Sign",
+    "comment" : "xxx",
+    "changed_at" : ISODate("2010-01-15T18:00:00Z"),
+    "changed_by" : {
+      "system" : false,
+      "id" : "5a6ac1064a79a12eb0733d14",
+      "name" : "xxx"
+    },
+    "__v" : 0,
+    "status_id" : "5b890f29f4ca4942e5f3c7a4",
+    "candidate_type" : "nurse"
+  }
+]
