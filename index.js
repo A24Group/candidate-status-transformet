@@ -62,6 +62,7 @@
     let index = -1;
     let lastUpdatedIndex = -1;
     _.forEach(data, (entry, entryIndex) => {
+      console.log(`Next entry processed, number ${entryIndex}`)
       entry.candidate_id = entry.candidate_id ? entry.candidate_id.toString() : ''
 
       // find index using document data from destination array of object
@@ -137,5 +138,5 @@
   } catch(err) {
     console.log("Error while parsing Data : ", err);
   }
-  
+
 })()
